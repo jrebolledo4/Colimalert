@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/universal.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../css/mapa.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../css/header.css" media="screen" />
+  
+  <title>ColimAlert</title>
+</head>
+<body>
+      <div class="container-info-Colima">
+        <div class="containerBlack"></div>
+        <img src="../media/volcanColima.jpg">
+        <div class="colima-Tittle">
+          <p class="info-Colima-tittle">ColimAlert</p>
+        </div>
+        <div class="info-Colima">
+          <p>
+            ColimAlert es una aplicación que te permitirá marcar y a la vez conocer la ubicación de zonas donde ha sucedido algún tipo de actividad delictiva y que podría representar algún riesgo para el individuo
+          </p>
+        </div>
+      </div>
+      
+      <div class="message-info">
+        <p>Marca un punto en el mapa</p>
+      </div>
+        <div id="map"></div>
+
+        <div class="container-card">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="../media/jardinlibertad.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Ingresa los datos<i class="material-icons right">#</i></span>
+                <form onsubmit="return false">
+                  <span>Titulo nota</span>
+                  <input type="text" name="What-happend" placeholder="¿Que paso?" id="What-happend"/>
+                  <span>¿Como te llamas?</span>
+                  <input type="text" name="Whats-name" placeholder="Si lo desea escriba anonimo" id="Whats-name"/>
+                  <select id="seleccion">
+                    <option>Robo a mano armada</option>
+                    <option>Robo a casa habitación</option>
+                    <option>Homicidios dolosos</option>
+                    <option>Accidentes automovilísticos</option>
+                    <option>Otro...</option>
+                  </select>
+                  <span>¿Como ocurrio?</span>
+                  <textarea name="area-texto" class="inputarea" id="description"></textarea>         
+                  <button class="btn waves-effect waves-light" onclick="validar()" name="action">Enviar</button>
+                  <button class="btn waves-effect red" onclick="limpiar()">Cancelar</button>
+                </form>
+              </div>
+            </div>
+        </div>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="../js/datos.js"></script>                
+    <script src="../js/main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAElTJAgmuSGo2nkYYVhdfCeDqfmWwYGhg" type="text/javascript"></script>
+    
+  </body>
+</html>
